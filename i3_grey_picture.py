@@ -5,8 +5,15 @@ print("cap passed",cap)
 
 while True:
     r,f = cap.read()
-    cv2.imshow('webcam',f)
-    
+    f1 = cv2.cvtColor(f,cv2.COLOR_BGR2GRAY)
+    cv2.imshow('webcam',f1)
+
+
+    key = cv2.waitKey(1)
+
+    if key ==ord('q'):
+        break
+
 print('started')
 
 
